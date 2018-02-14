@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Border : MonoBehaviour {
 
-    Vector3 positionToChange;
+    Vector3 positionToChange;                   
 
 	// Use this for initialization
 	void Start ()
@@ -19,7 +19,6 @@ public class Border : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print("hit the border");
         if (transform.position.x > 0f)
         {
             collision.gameObject.transform.position = collision.gameObject.transform.position - positionToChange;

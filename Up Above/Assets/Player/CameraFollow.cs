@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
 
-    [SerializeField] GameObject target;
+    [SerializeField] GameObject target;             // holds the target to follow
 
 	// Use this for initialization
 	void Start ()
@@ -15,6 +15,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        // Make your position their position, with some offset
         transform.position = new Vector3(target.transform.position.x, target.transform.position.y + 3.75f, transform.position.z);
 	}
 }

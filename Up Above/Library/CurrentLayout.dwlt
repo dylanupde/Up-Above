@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 332, y: 271}
   m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 67
+  controlID: 107
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -116,7 +116,7 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
   controlID: 9
@@ -165,7 +165,7 @@ MonoBehaviour:
     y: 0
     width: 1453
     height: 957
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
   controlID: 10
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 0
     width: 1453
     height: 624
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
   controlID: 11
 --- !u!114 &12
@@ -275,8 +275,8 @@ MonoBehaviour:
     y: 0
     width: 251
     height: 624
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -376,7 +376,7 @@ MonoBehaviour:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: -0.14251228, y: -0.13260561, z: 0.019270185, w: -0.9806807}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -426,13 +426,13 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Dylan\Desktop\HW\GDD 2150\Up Above
+  m_LastProjectPath: C:\Users\Dylan\Desktop\HW\GDD 2150\Up Above Repository\Up Above
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1a260000
-    m_LastClickedID: 9754
-    m_ExpandedIDs: 000000001a260000ffffff7f
+    m_SelectedIDs: 1c260000
+    m_LastClickedID: 9756
+    m_ExpandedIDs: 000000001c260000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -460,7 +460,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a260000
+    m_ExpandedIDs: 000000001c260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -543,9 +543,9 @@ MonoBehaviour:
     height: 603
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 58060000
     m_LastClickedID: 0
-    m_ExpandedIDs: 8aa7fdff1afcffff00000000442600008a260000
+    m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
