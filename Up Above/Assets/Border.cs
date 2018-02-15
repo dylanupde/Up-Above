@@ -19,13 +19,16 @@ public class Border : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (transform.position.x > 0f)
+        if (collision.gameObject.tag == "Hookable")
         {
-            collision.gameObject.transform.position = collision.gameObject.transform.position - positionToChange;
-        }
-        else
-        {
-            collision.gameObject.transform.position = collision.gameObject.transform.position + positionToChange;
+            if (transform.position.x > 0f)
+            {
+                collision.gameObject.transform.position = collision.gameObject.transform.position - positionToChange;
+            }
+            else
+            {
+                collision.gameObject.transform.position = collision.gameObject.transform.position + positionToChange;
+            }
         }
     }
 }

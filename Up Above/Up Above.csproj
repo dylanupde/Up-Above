@@ -79,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Border.cs" />
-    <Compile Include="Assets\HorizontalMover.cs" />
+    <Compile Include="Assets\NPCs\HorizontalMover.cs" />
     <Compile Include="Assets\Player\CameraFollow.cs" />
     <Compile Include="Assets\Player\Grapple.cs" />
     <Compile Include="Assets\Player\Player.cs" />
