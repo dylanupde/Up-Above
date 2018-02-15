@@ -57,7 +57,7 @@ public class Grapple : MonoBehaviour {
         else if (parentRotatorScript.Hooked)
         {
             // ...find out how far you should be extended, and be there
-            float extensionLength = (parentRotatorScript.Target.transform.position - parentRotatorScript.transform.position).magnitude;
+            float extensionLength = (parentRotatorScript.Target.transform.position + parentRotatorScript.TargetPositionOffset - parentRotatorScript.transform.position).magnitude;
             transform.localPosition = Vector3.up * extensionLength;
         }
 	}
@@ -68,14 +68,18 @@ public class Grapple : MonoBehaviour {
         // If the object was hookable and you're in the middle of a shot being fired...
         if (collision.gameObject.tag == "Hookable" && parentRotatorScript.Firing)
         {
-            // Assign that object as your target, and flag that you're hooked and no longer firing
+            // Assign that object as your target, ,flag that you're hooked and no longer firing, and get the position that you hit relative to the target
             parentRotatorScript.Target = collision.gameObject;
             parentRotatorScript.Firing = false;
             parentRotatorScript.Hooked = true;
+            parentRotatorScript.TargetPositionOffset = transform.position - collision.gameObject.transform.position;
         }
     }
 
 
+
+
+    // :::::METHODS:::::
     /// <summary>
     /// Just puts you back in your normal, unfired place
     /// </summary>

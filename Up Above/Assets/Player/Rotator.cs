@@ -8,6 +8,7 @@ public class Rotator : MonoBehaviour {
     bool hooked = false;
     GameObject target;                      // holds the gameobject that we're hooked to
     Rigidbody2D playerRB2D;
+    Vector3 targetPositionOffset;
 
     [SerializeField] float flySpeed = 10;
 
@@ -33,6 +34,12 @@ public class Rotator : MonoBehaviour {
         get { return hooked; }
         set { hooked = value; }
     }
+
+    public Vector3 TargetPositionOffset
+    {
+        get { return targetPositionOffset; }
+        set { targetPositionOffset = value; }
+    }
     #endregion
 
     // Use this for initialization
@@ -48,8 +55,8 @@ public class Rotator : MonoBehaviour {
         // If you're hooked to something...
         if (hooked)
         {
-            // ...point the hookshot to it and sling yourself in its direction
-            RotateToPointTo(target.transform.position);
+            // ...point the hookshot to it (taking into account the offset) and sling yourself in its direction
+            RotateToPointTo(target.transform.position + targetPositionOffset);
             Vector2 flingDirection = (target.transform.position - transform.position).normalized;
             playerRB2D.velocity = flingDirection * flySpeed * Time.deltaTime;
         }
