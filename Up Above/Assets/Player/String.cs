@@ -21,7 +21,7 @@ public class String : MonoBehaviour {
 	void LateUpdate ()
     {
         // If the arrow is being fired or is hooked to something...
-        if (parentRotatorScript.Firing || parentRotatorScript.Hooked)
+        if (parentRotatorScript.CurrentState != State.Normal)
         {
             // ...stretch as far as the arrow is
             float newLength = (arrow.transform.position - transform.position).magnitude;

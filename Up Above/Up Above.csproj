@@ -78,12 +78,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BackgroundFollow.cs" />
     <Compile Include="Assets\Border.cs" />
+    <Compile Include="Assets\Ceiling.cs" />
+    <Compile Include="Assets\GroundFollow.cs" />
+    <Compile Include="Assets\HeightCounter.cs" />
     <Compile Include="Assets\NPCs\HorizontalMover.cs" />
+    <Compile Include="Assets\NPCs\Rocket\Rocket.cs" />
+    <Compile Include="Assets\NPCs\Wind\Wind.cs" />
     <Compile Include="Assets\Player\CameraFollow.cs" />
     <Compile Include="Assets\Player\Grapple.cs" />
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\Player\Rotator.cs" />
+    <Compile Include="Assets\Player\State.cs" />
     <Compile Include="Assets\Player\String.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

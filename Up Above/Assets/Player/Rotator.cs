@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Rotator : MonoBehaviour {
-    
-    bool firing = false;
-    bool hooked = false;
+
+
+    State currentState;
     GameObject target;                      // holds the gameobject that we're hooked to
     Rigidbody2D playerRB2D;
     Vector3 targetPositionOffset;
@@ -23,16 +24,10 @@ public class Rotator : MonoBehaviour {
         set { target = value; }
     }
 
-    public bool Firing
+    public State CurrentState
     {
-        get { return firing; }
-        set { firing = value; }
-    }
-
-    public bool Hooked
-    {
-        get { return hooked; }
-        set { hooked = value; }
+        get { return currentState; }
+        set { currentState = value; }
     }
 
     public Vector3 TargetPositionOffset
@@ -47,13 +42,15 @@ public class Rotator : MonoBehaviour {
     {
         // Grab hold of the player's rigidbody so we can control it from here
         playerRB2D = transform.parent.gameObject.GetComponent<Rigidbody2D>();
+
+        currentState = State.Normal;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         // If you're hooked to something...
-        if (hooked)
+        if (currentState == State.Hooked)
         {
             // ...point the hookshot to it (taking into account the offset) and sling yourself in its direction
             RotateToPointTo(target.transform.position + targetPositionOffset);
@@ -61,7 +58,7 @@ public class Rotator : MonoBehaviour {
             playerRB2D.velocity = flingDirection * flySpeed * Time.deltaTime;
         }
         // Otherwise, if you're not hooked or firing...
-        else if (!hooked && !firing)
+        else if (currentState == State.Normal)
         {
             // ...rotate the hookshot to point to the mouse
             RotateToPointTo(Camera.main.ScreenToWorldPoint(Input.mousePosition));
